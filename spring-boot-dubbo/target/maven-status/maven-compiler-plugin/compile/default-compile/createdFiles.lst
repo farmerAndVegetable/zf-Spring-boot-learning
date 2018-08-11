@@ -1,0 +1,4 @@
+com\springboot\dubbo\http\UserService.class
+com\springboot\dubbo\http\UserServiceImpl.class
+com\springboot\dubbo\Application.class
+com\springboot\dubbo\aop\ControllerInterceptor.class

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+         <!-- ch.qos.logback.core.ConsoleAppender 控制台输出 -->  
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+            </Pattern>
+        </layout>
+    </appender>
+    <!-- ch.qos.logback.core.rolling.RollingFileAppender 文件日志输出 --> 
+    <appender name="mavenProjectlogs"
+        class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>D:/myProject/mavenProject.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>D:/myProject/mavenProject.log.%d{yyyy-MM-dd}
+            </fileNamePattern>
+            <maxHistory>5</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="springlogs"
+        class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>d:/myProject/mavenProject-spring.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>D:/myProject/mavenProject-spring.log.%d{yyyy-MM-dd}
+            </fileNamePattern>
+            <maxHistory>5</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    
+    <!--精确设置每个包下面的日志  -->
+    <logger name="com" level="DEBUG">
+        <appender-ref ref="mavenProjectlogs" />
+    </logger>
+    
+    <logger name="org.springframework" level="ERROR">
+        <appender-ref ref="springlogs" />
+    </logger>
+    <logger name="org.springframework.web" level="ERROR">
+        <appender-ref ref="springlogs" />
+    </logger>
+    
+    <!-- Hibernate显示sql参数值 -->
+    <logger name="org.hibernate.type.descriptor.sql.BasicBinder"  level="TRACE" />
+    <logger name="org.hibernate.type.descriptor.sql.BasicExtractor"  level="DEBUG" />
+    <!-- <logger name="org.hibernate.SQL" level="DEBUG" />
+    <logger name="org.hibernate.type" level="TRACE" />
+    <logger name="org.hibernate.engine.QueryParameters" level="DEBUG" />
+    <logger name="org.hibernate.engine.query.HQLQueryPlan" level="DEBUG" /> -->
+     <!-- 定义了ERROR和INFO级别的日志，分别在STDOUT/mavenProjectlogs输出 -->  
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    <!--     <appender-ref ref="mavenProjectlogs" /> -->
+    </root>
+</configuration>
