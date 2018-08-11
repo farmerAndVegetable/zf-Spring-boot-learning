@@ -1,0 +1,8 @@
+org\zf\dal\model\User.class
+org\zf\dal\model\UserExample$Criterion.class
+org\zf\dal\mapper\UserExtMapper.class
+org\zf\dal\model\UserExample$GeneratedCriteria.class
+org\zf\dal\mapper\UserMapper.class
+org\zf\dal\common\MyGenerator.class
+org\zf\dal\model\UserExample.class
+org\zf\dal\model\UserExample$Criteria.class

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.2.xsd
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd ">
+    
+
+	<!-- <import resource="classpath*:/config/application-dao.xml"/> -->
+	<import resource="classpath*:/config_service/compentBo-bean.xml"/>
+    <import resource="classpath:/config/dubbo/application_dubbo.xml"/>
+    
+<!-- 可以通过组件扫面创建bean,进而代替<bean id="userController" class="org.zf.web.rpc.UserController"/> 
+	该配置项其实也包含了自动注入上述processor的功能，因此当使用<context:component-scan/>后，即可将<context:annotation-config/>省去。
+-->
+     <!--扫描web相关的bean -->
+    <context:component-scan base-package="org.zf.web.*"/>
+	<!-- <bean id="userController" class="org.zf.web.rpc.UserController" init-method="init"/> -->
+	
+   <!--  <mvc:annotation-driven />注解驱动，代替了注解映射器和注解适配器
+   <bean  class=" org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"/> 
+   <bean class=" org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/> 
+    ,另外该驱动还默认加载了很多参数绑定方法，比如说json转换解析器-->
+    <mvc:annotation-driven />
+
+ 
+    <mvc:interceptors>
+     	<mvc:interceptor>
+ 
+        	<mvc:mapping path="/*/*"/>
+
+			<mvc:exclude-mapping path="/**/login.html"/>
+			
+			<bean class="org.zf.web.interceptors.LoginInterceptor"/>
+			
+		</mvc:interceptor>
+		
+	</mvc:interceptors>
+
+   <!--  参见帖子：https://blog.csdn.net/zouxucong/article/details/74994331 
+   用于分离前端，不让
+   <servlet-mapping>
+        <servlet-name>spring</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    处理前端的页面，样式等。
+   -->
+	 <mvc:resources mapping="/html/**" location="/html/" /> 
+	 <mvc:resources mapping="/css/**" location="/css/" /> 
+	 <mvc:resources mapping="/js/**" location="/js/" /> 
+	 <mvc:resources mapping="/image/**" location="/image/" />
+
+<!-- 视图解析器配置 -->
+    <bean id="viewResolver"
+        class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass">
+            <value>org.springframework.web.servlet.view.JstlView</value>
+        </property>
+        <property name="prefix">
+            <value>/WEB-INF/classes/views/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    	<property name="maxUploadSize">
+    		<value>10485760</value>
+    	</property>
+    	<property name="defaultEncoding">
+    		<value>utf-8</value>
+    	</property>
+    </bean>
+    
+   
+</beans>
