@@ -20,23 +20,22 @@
       <artifactId>junit</artifactId>
       <scope>test</scope>
      </dependency>
+     <!-- 实现slf4j接口并整合 -->
+    <dependency>
+     	<groupId>ch.qos.logback</groupId>
+    	<artifactId>logback-classic</artifactId>
+    </dependency>
       <dependency>
     	<groupId>com.alibaba.headDirectory</groupId>
-  		<artifactId>zf-common</artifactId>
+  		<artifactId>zf-core</artifactId>
   		 <version>0.0.1-SNAPSHOT</version>
     </dependency>
     <dependency>
     	<groupId>com.alibaba.headDirectory</groupId>
   		<artifactId>zf-dal</artifactId>
   		 <version>0.0.1-SNAPSHOT</version>
+  		
     </dependency>
-   
-    <dependency>
-    	 <groupId>com.alibaba.headDirectory</groupId>
-  		 <artifactId>zf-commonService</artifactId>
-  		  <version>0.0.1-SNAPSHOT</version>
-    </dependency>
-    
     <!-- Spring框架 -->
 		<!-- ================================================= -->
 		<dependency>
@@ -49,15 +48,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-aop</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context-support</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -67,22 +58,7 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 		</dependency>
-	 <dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
-		</dependency>
-  		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
-		</dependency>
+		
 	<!-- 	Redis缓存 -->
 	<!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
 		<dependency>

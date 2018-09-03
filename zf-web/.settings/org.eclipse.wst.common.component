@@ -7,13 +7,13 @@
         <dependent-module archiveName="zf-bo-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zf-bo/zf-bo">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="zf-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zf-common/zf-common">
+        <dependent-module archiveName="zf-core-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zf-core/zf-core">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="zf-dal-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zf-dal/zf-dal">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="zf-commonService-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zf-commonService/zf-commonService">
+        <dependent-module archiveName="zf-util-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zf-util/zf-util">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="context-root" value="zf-web"/>

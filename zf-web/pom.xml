@@ -29,22 +29,11 @@
 	    	<groupId>com.alibaba.headDirectory</groupId>
 	  		<artifactId>zf-common</artifactId>
 	  		 <version>0.0.1-SNAPSHOT</version>
-	  		<exclusions>
-	  		<exclusion>
-	  			<artifactId>*</artifactId>
-	  			<groupId>*</groupId>
-	  		</exclusion>
-	  		</exclusions>
-	    </dependency>
-	    <dependency>
-	    	<groupId>com.alibaba.headDirectory</groupId>
-	  		<artifactId>zf-dal</artifactId>
-	  		 <version>0.0.1-SNAPSHOT</version>
 	    </dependency>
    
 	    <dependency>
 	    	 <groupId>com.alibaba.headDirectory</groupId>
-	  		 <artifactId>zf-commonService</artifactId>
+	  		 <artifactId>zf-util</artifactId>
 	  		  <version>0.0.1-SNAPSHOT</version>
 	    </dependency>
 	     <dependency>
@@ -82,21 +71,11 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
 		</dependency>
-	<!-- 	<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-tx</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-		</dependency> -->
-	<!-- 	<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
-		</dependency> -->
+	
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
