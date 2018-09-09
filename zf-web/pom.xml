@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.alibaba.headDirectory</groupId>
 		<artifactId>zf-headDirectory</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>1.0</version>
 	</parent>
 	<artifactId>zf-web</artifactId>
 	<packaging>war</packaging>
@@ -23,18 +23,20 @@
 		<dependency>
 			<groupId>com.alibaba.headDirectory</groupId>
 			<artifactId>zf-bo</artifactId>
-			 <version>0.0.1-SNAPSHOT</version>
+			<exclusions>
+			 	<exclusion>
+                    <artifactId>spring</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+             </exclusions>
 		</dependency>
 		<dependency>
 	    	<groupId>com.alibaba.headDirectory</groupId>
-	  		<artifactId>zf-common</artifactId>
-	  		 <version>0.0.1-SNAPSHOT</version>
+	  		<artifactId>zf-core</artifactId>
 	    </dependency>
-   
 	    <dependency>
 	    	 <groupId>com.alibaba.headDirectory</groupId>
 	  		 <artifactId>zf-util</artifactId>
-	  		  <version>0.0.1-SNAPSHOT</version>
 	    </dependency>
 	     <dependency>
 			<groupId>javax.servlet</groupId>
@@ -44,11 +46,6 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
-		<dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-        </dependency>
 		<!-- Spring框架 -->
 		<!-- ================================================= -->
 		<dependency>
@@ -59,10 +56,10 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
 		</dependency>
-		<!-- <dependency>
+		 <dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
-		</dependency> -->
+		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -80,11 +77,6 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>com.fasterxml.jackson.dataformat</groupId>
-			<artifactId>jackson-dataformat-xml</artifactId>
 		</dependency>
 		<dependency>
 		    <groupId>org.aspectj</groupId>
@@ -109,12 +101,12 @@
             <groupId>com.alibaba</groupId>
             <artifactId>dubbo</artifactId>
             <version>2.5.3</version>
-           <!--  <exclusions>
+             <exclusions>
                 <exclusion>
                     <artifactId>spring</artifactId>
                     <groupId>org.springframework</groupId>
                 </exclusion>
-            </exclusions> -->
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.zookeeper</groupId>
