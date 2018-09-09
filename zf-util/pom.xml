@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.alibaba.headDirectory</groupId>
     <artifactId>zf-headDirectory</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0</version>
   </parent>
   <artifactId>zf-util</artifactId>
   <packaging>jar</packaging>
