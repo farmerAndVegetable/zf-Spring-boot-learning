@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.alibaba.headDirectory</groupId>
     <artifactId>zf-headDirectory</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0</version>
   </parent>
   <artifactId>zf-bo</artifactId>
   <packaging>jar</packaging>
@@ -28,13 +28,16 @@
       <dependency>
     	<groupId>com.alibaba.headDirectory</groupId>
   		<artifactId>zf-core</artifactId>
-  		 <version>0.0.1-SNAPSHOT</version>
     </dependency>
     <dependency>
     	<groupId>com.alibaba.headDirectory</groupId>
   		<artifactId>zf-dal</artifactId>
-  		 <version>0.0.1-SNAPSHOT</version>
-  		
+  		<exclusions>
+  			  <exclusion>
+                    <artifactId>spring</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+  		</exclusions>
     </dependency>
     <!-- Spring框架 -->
 		<!-- ================================================= -->
@@ -53,10 +56,6 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
 		</dependency>
 		
 	<!-- 	Redis缓存 -->
