@@ -8,7 +8,7 @@
   </parent> 
   <groupId>com.alibaba.headDirectory</groupId>
   <artifactId>zf-headDirectory</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0</version>
   <packaging>pom</packaging>
   <name>zf-headDirectory</name>
   <url>http://maven.apache.org</url>
@@ -37,31 +37,31 @@
   
   <dependencyManagement>
   <dependencies>
-<!--   <dependency>
+  <dependency>
  	<groupId>com.alibaba.headDirectory</groupId>
 	<artifactId>zf-web</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
   </dependency>
   <dependency>
 	  <groupId>com.alibaba.headDirectory</groupId>
 	  <artifactId>zf-bo</artifactId>
-	  <version>0.0.1-SNAPSHOT</version>
+	 <version>1.0</version>
 	</dependency>
     <dependency>
 	   <groupId>com.alibaba.headDirectory</groupId>
 	  <artifactId>zf-dal</artifactId>
-	  <version>0.0.1-SNAPSHOT</version>
+	 <version>1.0</version>
 	</dependency>
 	  <dependency>
     	<groupId>com.alibaba.headDirectory</groupId>
-  		<artifactId>zf-common</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
+  		<artifactId>zf-util</artifactId>
+  		<version>1.0</version>
     </dependency>
 	<dependency>
      <groupId>com.alibaba.headDirectory</groupId>
-	  <artifactId>zf-commonService</artifactId>
-	  <version>0.0.1-SNAPSHOT</version>
-	</dependency> -->
+	  <artifactId>zf-core</artifactId>
+	  <version>1.0</version>
+	</dependency>
 
       <dependency>
           <groupId>junit</groupId>
