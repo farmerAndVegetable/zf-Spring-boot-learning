@@ -14,10 +14,11 @@
   <url>http://maven.apache.org</url>
   <modules>
   	<module>zf-bo</module>
-  	<module>zf-common</module>
-  	<module>zf-commonService</module>
+  	<module>zf-core</module>
+  	<module>zf-util</module>
   	<module>zf-dal</module>
   	<module>zf-web</module>
+	<module>zf-dubboService</module>
   	<module>spring-boot-dubbo</module>
   </modules>
 
@@ -57,12 +58,17 @@
   		<artifactId>zf-util</artifactId>
   		<version>1.0</version>
     </dependency>
+
 	<dependency>
      <groupId>com.alibaba.headDirectory</groupId>
 	  <artifactId>zf-core</artifactId>
 	  <version>1.0</version>
 	</dependency>
-
+	<dependency>
+		<groupId>com.alibaba.headDirectory</groupId>
+	  	<artifactId>zf-dubboService</artifactId>
+	  	 <version>1.0</version>
+	</dependency>
       <dependency>
           <groupId>junit</groupId>
           <artifactId>junit</artifactId>
