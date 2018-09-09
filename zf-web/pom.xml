@@ -38,6 +38,10 @@
 	    	 <groupId>com.alibaba.headDirectory</groupId>
 	  		 <artifactId>zf-util</artifactId>
 	    </dependency>
+	    <dependency>
+	    	 <groupId>com.alibaba.headDirectory</groupId>
+	  		 <artifactId>zf-dubboService</artifactId>
+	    </dependency>
 	     <dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
