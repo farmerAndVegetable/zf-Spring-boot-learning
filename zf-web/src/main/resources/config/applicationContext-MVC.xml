@@ -19,7 +19,7 @@
 	该配置项其实也包含了自动注入上述processor的功能，因此当使用<context:component-scan/>后，即可将<context:annotation-config/>省去。
 -->
      <!--扫描web相关的bean -->
-    <context:component-scan base-package="org.zf.web.*"/>
+    <context:component-scan base-package="org.zf.*"/>
 	<!-- <bean id="userController" class="org.zf.web.rpc.UserController" init-method="init"/> -->
 	
    <!--  <mvc:annotation-driven />注解驱动，代替了注解映射器和注解适配器

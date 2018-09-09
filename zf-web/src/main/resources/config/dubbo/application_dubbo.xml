@@ -13,6 +13,5 @@
     <!-- <dubbo:registry address="zookeeper://192.168.2.193:2181" check="false" /> -->
 
     <!-- 声明需要暴露的服务接口 -->
-    <dubbo:reference interface="org.zf.web.service.UserService" id="userService" check="false" />
-
+    <dubbo:reference interface="org.zf.dubbo.commonservice.UserService" id="userService" check="false" />
 </beans>
