@@ -81,6 +81,11 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
         </dependency>
+       <!--  dubbo服务接口定义包 -->
+        <dependency>
+         	<groupId>com.alibaba.headDirectory</groupId>
+   		 	<artifactId>zf-dubboService</artifactId>
+     	</dependency>
 		<dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>dubbo</artifactId>
